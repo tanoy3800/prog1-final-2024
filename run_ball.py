@@ -4,7 +4,7 @@ import random
 import math
 
 class rb:
-    def __init__(self, size, x, y, vx, vy, color, id):
+    def __init__(self, size, x, y, vx, vy, color):
         self.size = size
         self.x = x
         self.y = y

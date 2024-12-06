@@ -15,17 +15,17 @@ class RS:
         print(self.canvas_width, self.canvas_height)
         ball_radius = 0.05 * self.canvas_width
         turtle.colormode(255)
-        xpos = []
-        ypos = []
-        vx = []
-        vy = []
-        ball_color = []
+        self.x = []
+        self.y = []
+        self.vx = []
+        self.vy = []
+        self.color = []
         for i in range(num_balls):
-            xpos.append(random.uniform(-1*self.canvas_width + ball_radius, self.canvas_width - ball_radius))
-            ypos.append(random.uniform(-1*self.canvas_height + ball_radius, self.canvas_height - ball_radius))
-            vx.append(10*random.uniform(-1.0, 1.0))
-            vy.append(10*random.uniform(-1.0, 1.0))
-            ball_color.append((random.randint(0, 255), random.randint(0, 255), random.randint(0, 255)))
+            self.x.append(random.uniform(-1*self.canvas_width + ball_radius, self.canvas_width - ball_radius))
+            self.y.append(random.uniform(-1*self.canvas_height + ball_radius, self.canvas_height - ball_radius))
+            self.vx.append(10*random.uniform(-1.0, 1.0))
+            self.vy.append(10*random.uniform(-1.0, 1.0))
+            self.color.append((random.randint(0, 255), random.randint(0, 255), random.randint(0, 255)))
         
     def draw_border(self):
         turtle.penup()
@@ -40,4 +40,4 @@ class RS:
             turtle.left(90)
 
     def run(self):
-        
+        run_ball(size, self.x, self.y, self.vx, self.vy, self.color)
